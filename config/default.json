@@ -10,6 +10,12 @@
     "userInfo":
     {
       "name": "Param"
+    }, 
+    "openWeatherMap": {
+      "baseUrl": "https://api.openweathermap.org/data/2.5/",
+      "lat":"19.0144",
+      "lon":"72.8479",
+      "units": "metric" 
     }
   }
   

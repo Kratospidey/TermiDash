@@ -1,13 +1,14 @@
-const config = require("config");
-require('dotenv').config();
+require("dotenv").config();
+const loadModules = require("./modules/moduleLoader");
 
-const apiKey = process.env.API_KEY;
-// console.log(`Your API key is ${apiKey}`);
+(async () => {
+	const appData = await loadModules(); // Load all module data asynchronously
 
+	console.log(appData.greeting);
 
-const appName = config.get("appName");
-const tempUnit = config.get("weather.tempUnit");
-const timeFormat = config.get("time.format");
-console.log(`Welcome to ${appName}!`);
-console.log(`Your Preferred Temperature unit is ${tempUnit}!`);
-console.log(`Your Preferred Time Format is ${timeFormat}!`);
+	// Create a dynamic divider based on the width of the terminal window
+	const divider = "-".repeat(process.stdout.columns);
+	console.log(divider);
+
+	console.log(appData.weather); // Outputs the weather module result
+})();
