@@ -1,0 +1,15 @@
+{
+    "appName": "TermiDash",
+    "version": "1.0.0",
+    "weather": {
+      "tempUnit": "Celsius"
+    },
+    "time": {
+        "format": 24
+    },
+    "userInfo":
+    {
+      "name": "Param"
+    }
+  }
+  
